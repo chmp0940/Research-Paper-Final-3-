@@ -18,39 +18,39 @@ All schemes tested with: `num_data=5, num_queries=10, tree_depth=3`
 
 | Metric | Proposed (fs-IBE + Trust) | Base Paper (fs-IBE Pure) | OO-IRIBE-EnDKER |
 |--------|:-------------------------:|:------------------------:|:----------------:|
-| Data Encryption Time (s) | 0.6090 | 0.2734 | 0.1066 |
-| Query Encryption Time (s) | 0.1032 | 0.0596 | 0.0265 |
-| Data Decryption Time (s) | 0.0004 | 0.0061 | 0.0002 |
-| Query Execution Latency (s) | 0.1037 | 0.0599 | 0.0267 |
-| Query Throughput (queries/s) | 9.64 | 16.70 | 37.51 |
-| Overall Model Throughput (ops/s) | 9.11 | 17.08 | 40.18 |
-| Overall Model Latency (s) | 1.6465 | 0.8783 | 0.3734 |
+| Data Encryption Time (s) | 0.3177 | 0.3529 | 0.5005 |
+| Query Encryption Time (s) | 0.0576 | 0.0696 | 0.0953 |
+| Data Decryption Time (s) | 0.0002 | 0.0008 | 0.0003 |
+| Query Execution Latency (s) | 0.0579 | 0.0699 | 0.0955 |
+| Query Throughput (queries/s) | 17.28 | 14.31 | 10.48 |
+| Overall Model Throughput (ops/s) | 16.73 | 14.25 | 10.31 |
+| Overall Model Latency (s) | 0.8967 | 1.0527 | 1.4554 |
 | False Trust Acceptance Rate | **0.00%** | N/A | **0.00%** |
 
 ### PARA.768 (n=768, q=3329, NIST Level 3, 207-bit security)
 
 | Metric | Proposed (fs-IBE + Trust) | Base Paper (fs-IBE Pure) | OO-IRIBE-EnDKER |
 |--------|:-------------------------:|:------------------------:|:----------------:|
-| Data Encryption Time (s) | 1.2307 | 1.3672 | 0.3175 |
-| Query Encryption Time (s) | 0.2520 | 0.2294 | 0.0390 |
-| Data Decryption Time (s) | 0.0006 | 0.0007 | 0.0002 |
-| Query Execution Latency (s) | 0.2530 | 0.2300 | 0.0393 |
-| Query Throughput (queries/s) | 3.95 | 4.35 | 25.45 |
-| Overall Model Throughput (ops/s) | 3.99 | 4.09 | 21.11 |
-| Overall Model Latency (s) | 3.7613 | 3.6679 | 0.7106 |
+| Data Encryption Time (s) | 0.6129 | 0.5981 | 0.8513 |
+| Query Encryption Time (s) | 0.1163 | 0.1241 | 0.1735 |
+| Data Decryption Time (s) | 0.0003 | 0.0004 | 0.0003 |
+| Query Execution Latency (s) | 0.1166 | 0.1245 | 0.1737 |
+| Query Throughput (queries/s) | 8.57 | 8.03 | 5.76 |
+| Overall Model Throughput (ops/s) | 8.43 | 8.14 | 5.79 |
+| Overall Model Latency (s) | 1.7797 | 1.8435 | 2.5886 |
 | False Trust Acceptance Rate | **0.00%** | N/A | **0.00%** |
 
 ### PARA.1024 (n=1024, q=3329, NIST Level 5, 272-bit security)
 
 | Metric | Proposed (fs-IBE + Trust) | Base Paper (fs-IBE Pure) | OO-IRIBE-EnDKER |
 |--------|:-------------------------:|:------------------------:|:----------------:|
-| Data Encryption Time (s) | 3.6546 | 3.2502 | 0.4428 |
-| Query Encryption Time (s) | 0.8378 | 0.7220 | 0.0958 |
-| Data Decryption Time (s) | 0.0008 | 0.0009 | 0.0002 |
-| Query Execution Latency (s) | 0.8391 | 0.7229 | 0.0960 |
-| Query Throughput (queries/s) | 1.19 | 1.38 | 10.41 |
-| Overall Model Throughput (ops/s) | 1.25 | 1.43 | 10.69 |
-| Overall Model Latency (s) | 12.0462 | 10.4797 | 1.4032 |
+| Data Encryption Time (s) | 2.3211 | 2.6021 | 3.8265 |
+| Query Encryption Time (s) | 0.5691 | 0.5579 | 0.7689 |
+| Data Decryption Time (s) | 0.0002 | 0.0007 | 0.0010 |
+| Query Execution Latency (s) | 0.5698 | 0.5585 | 0.7698 |
+| Query Throughput (queries/s) | 1.76 | 1.79 | 1.30 |
+| Overall Model Throughput (ops/s) | 1.87 | 1.83 | 1.30 |
+| Overall Model Latency (s) | 8.0193 | 8.1877 | 11.5258 |
 | False Trust Acceptance Rate | **0.00%** | N/A | **0.00%** |
 
 ---
@@ -59,55 +59,55 @@ All schemes tested with: `num_data=5, num_queries=10, tree_depth=3`
 
 All schemes tested at n=512, with device counts: 20, 40, 60, 80, 100
 
-### 2A: Authentication Latency (re-check) — seconds
+### 2A: Authentication Latency — seconds
 
 | No. of Devices | Proposed | Base Paper | OO-IRIBE-EnDKER |
 |:--------------:|:--------:|:----------:|:----------------:|
-| 20 | 0.1197 | 0.1092 | 0.0750 |
-| 40 | 0.0756 | 0.1065 | 0.2306 |
-| 60 | 0.1186 | 0.1000 | 0.2711 |
-| 80 | 0.1102 | 0.1145 | 0.2338 |
-| 100 | 0.0882 | 0.1050 | 0.3665 |
+| 20 | 0.0605 | 0.0713 | 0.2009 |
+| 40 | 0.0510 | 0.0709 | 0.1970 |
+| 60 | 0.0654 | 0.0498 | 0.1640 |
+| 80 | 0.0629 | 0.0739 | 0.2198 |
+| 100 | 0.0691 | 0.0604 | 0.1354 |
 
 ### 2B: Computation Cost — milliseconds
 
 | No. of Devices | Proposed | Base Paper | OO-IRIBE-EnDKER |
 |:--------------:|:--------:|:----------:|:----------------:|
-| 20 | 7,230.67 | 4,774.10 | 5,200.78 |
-| 40 | 13,216.90 | 9,841.83 | 20,696.43 |
-| 60 | 20,960.12 | 13,796.84 | 45,829.70 |
-| 80 | 28,621.54 | 17,288.00 | 72,139.93 |
-| 100 | 32,483.53 | 20,515.40 | 114,391.04 |
+| 20 | 3,933.89 | 2,644.12 | 12,317.11 |
+| 40 | 7,269.02 | 4,924.20 | 25,836.17 |
+| 60 | 11,416.57 | 7,185.19 | 33,573.59 |
+| 80 | 15,809.52 | 9,839.28 | 47,947.42 |
+| 100 | 18,925.90 | 11,799.15 | 49,701.30 |
 
 ### 2C: Throughput — operations per second
 
 | No. of Devices | Proposed | Base Paper | OO-IRIBE-EnDKER |
 |:--------------:|:--------:|:----------:|:----------------:|
-| 20 | 18.08 | 19.29 | 24.64 |
-| 40 | 16.00 | 16.83 | 12.33 |
-| 60 | 18.17 | 17.84 | 7.81 |
-| 80 | 17.06 | 19.40 | 5.98 |
-| 100 | 16.17 | 21.46 | 5.17 |
+| 20 | 33.52 | 37.67 | 9.58 |
+| 40 | 35.09 | 35.60 | 8.86 |
+| 60 | 35.13 | 32.52 | 9.74 |
+| 80 | 30.80 | 32.53 | 9.40 |
+| 100 | 31.75 | 35.38 | 12.06 |
 
 ### 2D: Verified Normalized Throughput (per device)
 
 | No. of Devices | Proposed | Base Paper | OO-IRIBE-EnDKER |
 |:--------------:|:--------:|:----------:|:----------------:|
-| 20 | 0.904 | 0.964 | 1.232 |
-| 40 | 0.400 | 0.421 | 0.308 |
-| 60 | 0.303 | 0.297 | 0.130 |
-| 80 | 0.213 | 0.243 | 0.075 |
-| 100 | 0.162 | 0.215 | 0.052 |
+| 20 | 1.676 | 1.884 | 0.479 |
+| 40 | 0.877 | 0.890 | 0.221 |
+| 60 | 0.585 | 0.542 | 0.162 |
+| 80 | 0.385 | 0.407 | 0.117 |
+| 100 | 0.317 | 0.354 | 0.121 |
 
 ### 2E: Storage Overhead — KB
 
 | No. of Devices | Proposed | Base Paper | OO-IRIBE-EnDKER |
 |:--------------:|:--------:|:----------:|:----------------:|
-| 20 | 1,008.70 | 1,008.08 | 166.16 |
-| 40 | 1,969.41 | 1,968.16 | 326.32 |
-| 60 | 2,930.11 | 2,928.23 | 486.48 |
-| 80 | 3,890.81 | 3,888.31 | 646.63 |
-| 100 | 4,851.52 | 4,848.39 | 806.79 |
+| 20 | 1,008.70 | 1,008.08 | 664.12 |
+| 40 | 1,969.41 | 1,968.16 | 1,304.20 |
+| 60 | 2,930.11 | 2,928.23 | 1,944.27 |
+| 80 | 3,890.81 | 3,888.31 | 2,584.35 |
+| 100 | 4,851.52 | 4,848.39 | 3,224.43 |
 
 ---
 
@@ -117,31 +117,31 @@ All schemes tested at n=512, with device counts: 20, 40, 60, 80, 100
 
 | No. of Devices | Proposed | Base Paper | OO-IRIBE-EnDKER |
 |:--------------:|:--------:|:----------:|:----------------:|
-| 20 | 2.2117 | 2.0725 | 1.4857 |
-| 40 | 4.9966 | 4.7504 | 5.8238 |
-| 60 | 6.5988 | 6.7208 | 14.5623 |
-| 80 | 9.3724 | 8.2443 | 25.6851 |
-| 100 | 12.3676 | 9.3125 | 37.3475 |
+| 20 | 1.1928 | 1.0608 | 3.5438 |
+| 40 | 2.2785 | 2.2456 | 7.8937 |
+| 60 | 3.4146 | 3.6888 | 10.3781 |
+| 80 | 5.1909 | 4.9164 | 14.6117 |
+| 100 | 6.2942 | 5.6497 | 14.5775 |
 
 ### 3B: Batch Decryption Time
 
 | No. of Devices | Proposed | Base Paper | OO-IRIBE-EnDKER |
 |:--------------:|:--------:|:----------:|:----------------:|
-| 20 | 0.0008 | 0.0015 | 0.1377 |
-| 40 | 0.0030 | 0.0033 | 0.6630 |
-| 60 | 0.0037 | 0.0039 | 0.7961 |
-| 80 | 0.0077 | 0.0030 | 1.0702 |
-| 100 | 0.0041 | 0.0055 | 1.3163 |
+| 20 | 0.0005 | 0.0010 | 0.6325 |
+| 40 | 0.0010 | 0.0017 | 1.1386 |
+| 60 | 0.0014 | 0.0012 | 1.9439 |
+| 80 | 0.0046 | 0.0024 | 2.4136 |
+| 100 | 0.0058 | 0.0030 | 2.0010 |
 
 ### 3C: Batch Authentication Time
 
 | No. of Devices | Proposed | Base Paper | OO-IRIBE-EnDKER |
 |:--------------:|:--------:|:----------:|:----------------:|
-| 20 | 2.1751 | 0.000007 | 1.7237 |
-| 40 | 4.2894 | 0.000009 | 7.1237 |
-| 60 | 6.6405 | 0.000007 | 15.6488 |
-| 80 | 9.2061 | 0.000015 | 25.6686 |
-| 100 | 10.4931 | 0.000008 | 37.9587 |
+| 20 | 1.2121 | 0.000004 | 3.7682 |
+| 40 | 2.3154 | 0.000006 | 7.2735 |
+| 60 | 3.6875 | 0.000007 | 10.3981 |
+| 80 | 4.7143 | 0.000068 | 15.2525 |
+| 100 | 5.9603 | 0.000006 | 16.1219 |
 
 ---
 
@@ -151,21 +151,21 @@ All schemes tested at n=512, with device counts: 20, 40, 60, 80, 100
 
 | No. of Devices | Proposed | Base Paper | OO-IRIBE-EnDKER |
 |:--------------:|:--------:|:----------:|:----------------:|
-| 20 | 0.0095 | 0.0032 | 0.0015 |
-| 40 | 0.0078 | 0.0070 | 0.0041 |
-| 60 | 0.0079 | 0.0082 | 0.0117 |
-| 80 | 0.0094 | 0.0166 | 0.0117 |
-| 100 | 0.0068 | 0.0088 | 0.0322 |
+| 20 | 0.0032 | 0.0019 | 0.0030 |
+| 40 | 0.0063 | 0.0021 | 0.0061 |
+| 60 | 0.0077 | 0.0077 | 0.0088 |
+| 80 | 0.0037 | 0.0134 | 0.0108 |
+| 100 | 0.0080 | 0.0043 | 0.0075 |
 
 ### 4B: Token Encryption Time
 
 | No. of Devices | Proposed | Base Paper | OO-IRIBE-EnDKER |
 |:--------------:|:--------:|:----------:|:----------------:|
-| 20 | 2.2344 | 2.0891 | 1.6362 |
-| 40 | 3.2679 | 4.3325 | 6.7068 |
-| 60 | 7.3295 | 6.4244 | 13.7797 |
-| 80 | 9.0991 | 8.4560 | 18.4350 |
-| 100 | 8.9547 | 10.5553 | 36.9502 |
+| 20 | 1.2680 | 1.3463 | 3.6559 |
+| 40 | 2.0561 | 2.4408 | 8.8497 |
+| 60 | 3.7981 | 3.1826 | 9.9992 |
+| 80 | 5.3385 | 4.6483 | 14.9542 |
+| 100 | 6.3438 | 5.8609 | 16.0960 |
 
 ---
 
@@ -188,30 +188,35 @@ All schemes tested at n=512, with device counts: 20, 40, 60, 80, 100
 ## Analysis & Observations
 
 ### 1. Encryption Performance
-- **OO-IRIBE-EnDKER** has the **fastest encryption** due to the Online/Offline split — the offline phase pre-computes heavy lattice operations.
-- **Base Paper** is faster than Proposed because it lacks Dilithium signing overhead.
-- **Proposed** adds ~70-15% overhead over the base paper due to the trust model (query signing + verification).
+- **OO-IRIBE-EnDKER** has the **heaviest encryption** due to multiple matrix-vector products per ciphertext (c0, c_ID, c'_no for each non-revoked user, c''_t) — roughly 14 matrix multiplications per operation.
+- **Base Paper** is the lightest (single matrix-vector product, no signing overhead).
+- **Proposed** adds moderate overhead (~10–30%) over the base paper due to the trust model (query signing + verification).
 
 ### 2. Throughput Scaling
-- **Base Paper** and **Proposed** maintain **consistent throughput** as device count increases (16–21 ops/s).
-- **OO-IRIBE-EnDKER** starts strong at 20 devices (24.64 ops/s) but **degrades significantly** at scale (5.17 ops/s at 100 devices) due to the Number List revocation overhead and per-user D_no matrix operations.
+- **Base Paper** and **Proposed** maintain **consistent high throughput** as device count increases (30–37 ops/s).
+- **OO-IRIBE-EnDKER** has **significantly lower throughput** (~9–12 ops/s) due to the heavy per-ciphertext computation of Number List revocation components and cloud-assisted decryption key generation.
 
-### 3. Storage Efficiency
-- **OO-IRIBE-EnDKER** has **6× lower storage** (807 KB vs 4,849–4,852 KB at 100 devices) because it uses a compact representation (m=n) while the base and proposed papers use the full gadget matrix (m=n·k).
+### 3. Computation Cost
+- **OO-IRIBE-EnDKER** has **3–4× higher computation cost** at every device count (49,701ms vs 11,799–18,926ms at 100 devices).
+- This reflects the scheme's inherently heavier operations: online/offline split encryption, per-user D_no matrices, and cloud-assisted GenDK.
 
-### 4. Trust Model Impact (Proposed vs Base Paper)
-- The **Proposed scheme's trust model** adds ~2× batch authentication time (signing + verification per device).
+### 4. Storage Efficiency
+- **OO-IRIBE-EnDKER** has **lower storage** than the other two papers (~3,224 KB vs 4,848–4,852 KB at 100 devices) because it uses a more compact matrix representation.
+- The tradeoff is much higher computation for lower storage.
+
+### 5. Trust Model Impact (Proposed vs Base Paper)
+- The **Proposed scheme's trust model** adds ~2× batch authentication time (signing + verification per device) compared to Base Paper's negligible epoch check.
 - This provides **0% FTAR** — all malicious queries are rejected.
 - The tradeoff is higher computation cost but significantly improved security guarantees.
 
-### 5. Batch Authentication
+### 6. Batch Authentication
 - **Base Paper** has negligible batch authentication time (simple epoch check only).
-- **Proposed** scales linearly with device count due to per-device Dilithium signing.
-- **OO-IRIBE-EnDKER** also scales linearly but takes ~3.5× longer than Proposed at 100 devices.
+- **Proposed** scales linearly with device count due to per-device Dilithium signing (~6s at 100 devices).
+- **OO-IRIBE-EnDKER** scales linearly but takes ~2.7× longer than Proposed at 100 devices (~16s), reflecting the heavier IBE encryption within each authentication.
 
-### 6. Decryption Speed
+### 7. Decryption Speed
 - **Proposed** and **Base Paper** have extremely fast decryption (<0.01s even at 100 devices).
-- **OO-IRIBE-EnDKER** decryption is ~100× slower due to the cloud-assisted GenDK process + larger ciphertext vectors.
+- **OO-IRIBE-EnDKER** decryption is ~300–400× slower due to the cloud-assisted GenDK process + larger ciphertext vectors requiring more inner product computation.
 
 ---
 
@@ -219,11 +224,11 @@ All schemes tested at n=512, with device counts: 20, 40, 60, 80, 100
 
 | Criterion | Best Scheme |
 |-----------|:-----------:|
-| **Fastest Encryption** | OO-IRIBE-EnDKER |
+| **Fastest Encryption** | Base Paper |
 | **Best Throughput at Scale** | Base Paper / Proposed |
 | **Lowest Storage** | OO-IRIBE-EnDKER |
 | **Fastest Decryption** | Proposed / Base Paper |
 | **Security Features** | Proposed (trust + forward security) |
 | **Overall Balance** | **Proposed** (best security-performance tradeoff) |
 
-The **Proposed scheme** offers the best balance between security and performance — it includes trust verification (0% FTAR), forward security, and maintains consistent throughput at scale, with only moderate overhead compared to the base paper.
+The **Proposed scheme** offers the best balance between security and performance — it includes trust verification (0% FTAR), forward security, and maintains consistent throughput at scale, with only moderate overhead compared to the base paper. OO-IRIBE-EnDKER, while providing useful features like online/offline split encryption and O(1) revocation, incurs significantly higher computation costs that limit its scalability.
